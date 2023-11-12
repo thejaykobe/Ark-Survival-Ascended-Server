@@ -22,6 +22,8 @@ This Docker image is designed to run a dedicated server for the game Ark Surviva
 | `QUERY_PORT`             | `27015`                    | The query port for the server                            |
 | `MAX_PLAYERS`            | `127`                       | Max allowed players                                      |
 | `CLUSTER_ID`             |  `cluster`                 | The Cluster ID for the server                            |
+| `SERVER_PASSWORD`             |  `password`                 | The password for the server                            |
+| `OFFLINE_PVP`             |  `false`                 | Enable or Disable offline PVP (true or false)                            |
 
 ---
 

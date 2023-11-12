@@ -123,9 +123,9 @@ start_server() {
 
     # Start the server with the conditional mods and battleye arguments
     sudo -u games wine "$ASA_DIR/Binaries/Win64/ArkAscendedServer.exe" \
-        $MAP_PATH?listen?SessionName=${SESSION_NAME}?Port=${ASA_PORT}?QueryPort=${QUERY_PORT}?MaxPlayers=${MAX_PLAYERS}?ServerAdminPassword=${SERVER_ADMIN_PASSWORD} \
+        $MAP_PATH?listen?SessionName=${SESSION_NAME}?Port=${ASA_PORT}?QueryPort=${QUERY_PORT}?MaxPlayers=${MAX_PLAYERS}?ServerAdminPassword=${SERVER_ADMIN_PASSWORD}?ServerPassword=${SERVER_PASSWORD}?PreventOfflinePvP=${OFFLINE_PVP} \
         -clusterid=${CLUSTER_ID} -ClusterDirOverride=$CLUSTER_DIR_OVERRIDE \
-        -servergamelog -servergamelogincludetribelogs -ServerRCONOutputTribeLogs -NotifyAdminCommandsInChat -nosteamclient \
+        -servergamelog -servergamelogincludetribelogs -ServerRCONOutputTribeLogs -NotifyAdminCommandsInChat -nosteamclient -crossplay -insecure \
         $mods_arg $battleye_arg 2>/dev/null &
     # Server PID
     SERVER_PID=$!
